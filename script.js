@@ -9,6 +9,7 @@ const songs = [
 ];
 const player = document.getElementById("player");
 const progress_bar = document.getElementById('progress')
+
 const createSongList = () => {
   const list = document.createElement("ol");
   for (let i = 0; i < songs.length; i++) {
@@ -69,7 +70,7 @@ progress_bar.addEventListener('click',(mine)=>{
  let mouseX = mine.offsetX;
  let song_duration = player.duration;
  let new_time = parseInt((mousex * song_duration)/ totalX)
- player.currentTime =new_time;
- progress_bar.value = (new_time * 100) / song_duration;
-  
+ 
+player.currentTime =new_time;
+progress_bar.value = (new_time * 100) / song_duration; 
 })
