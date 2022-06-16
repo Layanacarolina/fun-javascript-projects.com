@@ -65,9 +65,9 @@ function updateProgress() {
   }
 }
 
-progress_bar.addEventListener('click',(mine)=>{
+progress_bar.addEventListener('click',(event)=>{
  let totalX = progress_bar.clientWidth;
- let mouseX = mine.offsetX;
+ let mouseX = event.offsetX;
  let song_duration = player.duration;
  let new_time = parseInt((mousex * song_duration)/ totalX)
  
